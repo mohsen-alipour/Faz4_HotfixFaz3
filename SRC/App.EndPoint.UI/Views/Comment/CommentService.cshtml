@@ -1,0 +1,28 @@
+﻿    @{
+      Layout = "_LayoutCustomer";
+     }
+@model CommentViewModel
+<h1 class="mb-5">صفحه اضافه کردن نظرات سرویس  </h1>
+
+<form class="">
+      <input type="hidden" asp-for="CustomerUserId">
+       <input type="hidden" asp-for="ServiceId">
+    <div>
+        <label asp-for="OrderId" class="col-sm-2 col-form-label"></label>
+        <input type="text" class="form-control" asp-for="OrderId" readonly="readonly">
+    </div>
+       <div>
+        <label asp-for="ServiceTitle" class="col-sm-2 col-form-label"></label>
+        <input type="text" class="form-control" asp-for="ServiceTitle" readonly="readonly">
+    </div>
+
+    <div>
+       <label asp-for="CommentTitle" class="col-sm-2 col-form-label"></label>  
+       <input type="text" class="form-control"  asp-for="CommentTitle">
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="" asp-controller="Comment" asp-action="commentService" formmethod="post" value="ثبت"/>    
+        <a class="btn btn-primary" asp-area="" asp-controller="Customer"asp-action="HistoryOrder">بازگشت به لیست</a>
+    </div>
+    
+</form>
+

@@ -1,0 +1,25 @@
+﻿  @{
+    Layout = "_LayoutExpert";
+   }
+@model ExpertSpecialyViewModel
+<h1 class="mb-5">صفحه ایجاد ثبت تخصص  </h1>
+
+<form class="">
+  
+
+    <div class="col-8">
+      <select  class="pt-md-3" asp-for="categuryid" asp-items="@ViewBag.category">
+         <option selected>--- انتخاب دسته بندی </option>
+      </select>
+      <span asp-validation-for="CategoryTitle" class="text-danger"></span>
+    </div>
+
+
+
+
+    <div>
+        <input type="submit" class="btn btn-success" asp-area="" asp-controller="Expert" asp-action="SetExpertSpeciallyFavorite" formmethod="post" value="ثبت"/>   
+        <a class="btn btn-primary" asp-area="" asp-controller="Expert"asp-action="ListExpertSpecialy">بازگشت به لیست</a>
+    </div>
+    
+</form>
